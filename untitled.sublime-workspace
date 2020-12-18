@@ -1,0 +1,270 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\"\"\"\nScript that converts JPG images to PNG images\n\n- inputs: \t1. Path where JPG files are located\n \t\t\t2. Path where PNG files will be saved\n\n- output: \tFolder with PNG files\t\n\n\"\"\"\n\nimport sys \t\t\t\t\t# this is to parse folders as arguments\nimport os \t\t\t\t\t# this is to create the output folder\nfrom PIL import Image\t\t# to process images\n\n#inputs\njpg_folder = os.path.abspath(sys.argv[1])\npng_folder = os.path.abspath(sys.argv[2])\n\n# create folder if does not exist\nif not os.path.exists(png_folder):\n\tos.mkdir(png_folder)\n\tprint(png_folder, 'succesfully created!')e\nlse:\n\tprint(png_folder, 'already exists!')\t\n\n# get list of files in jpg_folder\nfor file in sorted(os.listdir(jpg_folder)):\n\tprint(file)\n\tpic = Image.open(os.path.join(jpg_folder,file))\n\tnew_pic_name = file.split('.jpg')[0]\n\tpic.save( os.path.join(png_folder,new_pic_name+'.png'), format='PNG' )\n\nprint('Done!')\n\n",
+			"file": "JPGtoPNGconverter.py",
+			"file_size": 874,
+			"file_write_time": 132527147903430535,
+			"settings":
+			{
+				"buffer_size": 874,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"python3",
+				"Build With: Python3"
+			],
+			[
+				"buil",
+				"Build With: Python3"
+			],
+			[
+				"build",
+				"Build With: Python3"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"autopep",
+				"Preferences: AutoPep8 Settings – Default"
+			],
+			[
+				"package control insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Function"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pep8",
+				"Preferences: AutoPep8 Settings – Default"
+			],
+			[
+				"package control install",
+				"Package Control: Install Package"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"print('hola')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/martin/.config/sublime-text-3/Packages/AutoPep8/AutoPep8.sublime-settings",
+		"/home/martin/.config/sublime-text-3/Packages/AutoPEP8/AutoPep8.sublime-settings",
+		"/home/martin/.config/sublime-text-3/Packages/User/aver.py",
+		"/home/martin/.config/sublime-text-3/Packages/AutoPep8/Default.sublime-keymap"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "JPGtoPNGconverter.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								562,
+								562
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 108.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "Packages/Python 3/Python3.sublime-build",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 65.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"hola"
+			]
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
